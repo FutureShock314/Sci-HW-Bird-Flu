@@ -65,6 +65,21 @@ h1 {
     transform: translateY(-65px) translateX(30px);
 }
 
+@media screen and (max-width: 1200px) {
+    .down-arrow {
+        scale: 200%;
+        transform: translateY(-32px) translateX(10px);
+    }
+    .title-end {
+        font-size: 13rem;
+        transform: translateY(-53px);
+    }
+    .title-start {
+        font-size: 7rem;
+        transform: translateY(28px);
+    }
+}
+
 @keyframes arrow {
     0%,
     100% {
@@ -166,172 +181,4 @@ section {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1200px) {
-    html,
-    body {
-        height: 100%;
-        width: 100%;
-    }
-    html {
-        overflow-x: hidden;
-    }
-    body {
-        --body-bg: rgb(15, 15, 15);
-        background-color: var(--body-bg);
-        font-family: system-ui;
-    }
 
-    * {
-        margin: 0;
-        padding: 0;
-        /* outline: green 1px solid; */
-    }
-
-    h1 {
-        margin-left: 0;
-    }
-    .header-start {
-        background-image: url("./img/header-start.jpg");
-        width: 100vw;
-        height: 50%;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .title-start {
-        transform: translateY(28px);
-        font-size: 7rem;
-    }
-
-    .title {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-            sans-serif;
-        color: black;
-    }
-
-    .header-end {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .title-end {
-        font-size: 13rem;
-        transform: translateY(-53px);
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: url("./img/bg-clip.jpg");
-        color: transparent;
-    }
-
-    /* * SVG down arrow animations */
-    .down-arrow-container {
-        width: 500px;
-    }
-    .down-arrow {
-        scale: 200%;
-        transform: translateY(-32px) translateX(10px);
-    }
-
-    @keyframes arrow {
-        0%,
-        100% {
-            transform: translateY(0px);
-            opacity: 0;
-        }
-        33%,
-        40% {
-            transform: translateY(35px);
-            opacity: 1;
-        }
-        66%,
-        74% {
-            transform: translateY(calc(35px + 13px));
-            opacity: 1;
-        }
-        90% {
-            opacity: 0;
-        }
-        99% {
-            transform: translateY(calc(35px + 35px + 25px));
-            opacity: 0;
-        }
-    }
-
-    #arrow1 {
-        opacity: 0;
-        animation: arrow 3s ease-in-out infinite;
-        animation-delay: 0s;
-    }
-    #arrow2 {
-        opacity: 0;
-        animation: arrow 3s ease-in-out infinite;
-        animation-delay: 1s;
-    }
-    #arrow3 {
-        opacity: 0;
-        animation: arrow 3s ease-in-out infinite;
-        animation-delay: 2s;
-    }
-
-    /*  * Spikes and animation */
-    .wrapper {
-        max-width: 75rem;
-        margin-inline: auto;
-        padding-inline: 1rem;
-    }
-    .section-title {
-        text-align: center;
-        font-size: 2.25rem;
-    }
-
-    section {
-        padding-block: 5rem;
-    }
-
-    .spikes {
-        --spike-width: 50px;
-        --spike-height: 10px;
-        --spike-color: var(--body-bg);
-        position: relative;
-        color: black;
-        background: linear-gradient(to right, #fdc830, #f37335);
-    }
-
-    .spikes::before,
-    .spikes::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: var(--spike-height);
-        background: var(--spike-color);
-        -webkit-mask-image: url("./assets/triangle.svg");
-        -webkit-mask-size: var(--spike-width) var(--spike-height);
-        mask-image: url("./assets/triangle.svg");
-        mask-size: var(--spike-width) var(--spike-height);
-        animation: spike-motion 0.5s infinite linear;
-    }
-
-    @keyframes spike-motion {
-        100% {
-            -webkit-mask-position: var(--spike-width);
-            mask-position: var(--spike-width);
-        }
-    }
-
-    .spikes::before {
-        top: 0;
-    }
-
-    .spikes::after {
-        bottom: 0;
-        transform: rotate(0.5turn);
-    }
-
-    /* * Spike area text formatting */
-
-    .birds-text {
-        font-weight: bold;
-    }
-}
