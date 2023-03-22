@@ -7,7 +7,7 @@ html {
     overflow-x: hidden;
 }
 body {
-    --body-bg: rgb(15, 15, 15);
+    --body-bg: rgb(40, 40, 40);
     background-color: var(--body-bg);
     font-family: system-ui;
 }
@@ -120,8 +120,7 @@ h1 {
     animation: arrow 3s ease-in-out infinite;
     animation-delay: 2s;
 }
-
-/*  * Spikes and animation */
+/* * formatting */
 .wrapper {
     max-width: 75rem;
     margin-inline: auto;
@@ -132,9 +131,12 @@ h1 {
     font-size: 2.25rem;
 }
 
-section {
-    padding-block: 5rem;
+.gap {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
+
+/*  * Spikes and animation */
 
 .spikes {
     --spike-width: 50px;
@@ -181,4 +183,28 @@ section {
     font-weight: bold;
 }
 
+/* * wavy image masking */
 
+.wavy {
+    /* mask created with https://css-generators.com/wavy-shapes */
+    background: linear-gradient(to right, #00f260, #0575e6);
+
+    --mask: radial-gradient(45.07px at 50% 62.5px, #000 99%, #0000 101%)
+            calc(50% - 50px) 0/100px 51% repeat-x,
+        radial-gradient(45.07px at 50% -37.5px, #0000 99%, #000 101%) 50% 25px/100px
+            calc(51% - 25px) repeat-x,
+        radial-gradient(
+                45.07px at 50% calc(100% - 62.5px),
+                #000 99%,
+                #0000 101%
+            )
+            calc(50% - 50px) 100%/100px 51% repeat-x,
+        radial-gradient(
+                45.07px at 50% calc(100% + 37.5px),
+                #0000 99%,
+                #000 101%
+            )
+            50% calc(100% - 25px) / 100px calc(51% - 25px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
