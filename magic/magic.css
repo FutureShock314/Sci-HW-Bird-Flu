@@ -4,7 +4,7 @@
     --pink: rgb(244, 143, 177);
 }
   
-@keyframes background-pan {
+@keyframes magic-background-pan {
     from {
       background-position: 0% center;
     }
