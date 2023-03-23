@@ -2,9 +2,9 @@
     --purple: rgb(123, 31, 162);
     --violet: rgb(103, 58, 183);
     --pink: rgb(244, 143, 177);
-  }
+}
   
-  @keyframes background-pan {
+@keyframes background-pan {
     from {
       background-position: 0% center;
     }
@@ -12,24 +12,22 @@
     to {
       background-position: -200% center;
     }
-  }
+}
 
   
-  body {
+body {
     background-color: rgb(10, 10, 10);
     display: grid;
     height: 100vh;
     margin: 0px;
     overflow: hidden;
     place-items: center;
-  }
-  
-  .magic {
+    color: white;
+}
+
+.magic-text {
     display: inline-block;
     position: relative;
-  }
-  
-  .magic > .magic-text {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
       to right,
@@ -43,4 +41,4 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
-  }
+}
