@@ -127,19 +127,19 @@ h1 {
     margin-inline: auto;
     padding-inline: 1rem;
 }
-.section-title {
-    text-align: center;
-    font-size: 2.25rem;
+section {
+    padding-block: 5rem;
 }
-
-.gap {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+section.empty {
+    height: 50%;
 }
 
 /*  * Spikes and animation */
 
 .spikes {
+    padding-block: 5%;
+    height: 40%;
+
     --spike-width: 50px;
     --spike-height: 10px;
     --spike-color: var(--body-bg);
@@ -157,8 +157,8 @@ h1 {
     background: var(--spike-color);
     -webkit-mask-image: url("./assets/triangle.svg");
     -webkit-mask-size: var(--spike-width) var(--spike-height);
-    mask-image: url("./assets/triangle.svg");
-    mask-size: var(--spike-width) var(--spike-height);
+            mask-image: url("./assets/triangle.svg");
+            mask-size: var(--spike-width) var(--spike-height);
     animation: spike-motion 0.5s infinite linear;
 }
 
@@ -185,6 +185,9 @@ h1 {
 }
 
 .wavy {
+    /* mask created with https://css-generators.com/wavy-shapes */
+    background: linear-gradient(to right, #00f260, #0575e6);
+
     --mask: radial-gradient(45.07px at 50% 62.5px, #000 99%, #0000 101%)
             calc(50% - 50px) 0/100px 51% repeat-x,
         radial-gradient(45.07px at 50% -37.5px, #0000 99%, #000 101%) 50% 25px/100px
