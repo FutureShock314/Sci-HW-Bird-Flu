@@ -133,6 +133,13 @@ section {
 section.empty {
     height: 50%;
 }
+.section-text {
+    font-weight: bold;
+}
+.section-title,
+.section-text {
+    text-align: center;
+}
 
 /*  * Spikes and animation */
 
@@ -178,11 +185,7 @@ section.empty {
     transform: rotate(0.5turn);
 }
 
-/* * Spike area text formatting */
-
-.birds-text {
-    font-weight: bold;
-}
+/* * Wavy */
 
 .wavy {
     /* mask created with https://css-generators.com/wavy-shapes */
