@@ -2,13 +2,13 @@
 
 ## Installation
 Click the code button
-![alt text](https://github.com/FutureShock314/Sci-HW-Bird-Flu/blob/main/README-Images/code.png)
+![alt text](https://github.com/FutureShock314/Sci-HW-Bird-Flu/blob/main/README-Images/code.jpeg)
 
 Then choose ‘Local’
-![alt text](https://github.com/FutureShock314/Sci-HW-Bird-Flu/blob/main/README-Images/local.png)
+![alt text](https://github.com/FutureShock314/Sci-HW-Bird-Flu/blob/main/README-Images/local.jpeg)
 
 Click ‘Download Zip’
-![alt text](https://github.com/FutureShock314/Sci-HW-Bird-Flu/blob/main/README-Images/zip.png)
+![alt text](https://github.com/FutureShock314/Sci-HW-Bird-Flu/blob/main/README-Images/zip.jpeg)
 
 ## Usage
 To use, open your downloads folder
